@@ -37,6 +37,7 @@ const MobileNav = () => {
                 <button
                     onClick={() => setIsNavOpen((isOpen) => !isOpen)}
                     className="flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 cursor-pointer"
+                    aria-label={isNavOpen ? "Close menu" : "Open menu"}
                 >
                     {isNavOpen ? (
                         <X size={30} />

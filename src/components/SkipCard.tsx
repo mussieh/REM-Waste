@@ -12,7 +12,7 @@ type SkipCardProps = {
 
 const SkipCard = ({ skip }: SkipCardProps) => {
     const image = new URL(
-        `../assets/images/${skip.size}-skip.png`,
+        `../assets/images/${skip.size}-skip.webp`,
         import.meta.url
     ).href;
 
@@ -37,7 +37,7 @@ const SkipCard = ({ skip }: SkipCardProps) => {
             <div className="relative">
                 <Badge size={skip.size} />
                 <img
-                    className="w-[40rem] h-[14rem] rounded-2xl"
+                    className="w-full h-auto rounded-2xl object-cover"
                     src={image}
                     alt={`${skip.size} Yard Skip`}
                 />
