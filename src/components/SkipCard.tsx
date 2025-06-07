@@ -4,6 +4,7 @@ import SkipButton from "./SkipButton";
 import { SelectedSkipContext } from "../contexts/SelectedSkipContext";
 import clsx from "clsx";
 import { TriangleAlert } from "lucide-react";
+import Badge from "./Badge";
 
 type SkipCardProps = {
     skip: Skip;
@@ -34,9 +35,7 @@ const SkipCard = ({ skip }: SkipCardProps) => {
             )}
         >
             <div className="relative">
-                <div className="absolute right-6 top-[-0.7rem] md:top-[-1rem] rounded-2xl w-20 h-8 bg-button-selected flex justify-center items-center">
-                    <p className="text-white text-base">{skip.size} Yards</p>
-                </div>
+                <Badge size={skip.size} />
                 <img
                     className="w-[40rem] h-[14rem] rounded-2xl"
                     src={image}
