@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
 import logoImg from "../assets/images/logo.png";
+import ThemeToggle from "../components/ThemeToggle";
 
 const NotFound = () => {
     return (
-        <main className="h-screen flex flex-col justify-center items-center">
+        <main className="h-screen flex flex-col justify-center items-center bg-white dark:bg-[#101827]">
+            <div className="fixed top-10 right-10">
+                <ThemeToggle />
+            </div>
             <motion.section
                 className="flex flex-col items-center p-4"
                 initial={{ opacity: 0, y: 50 }}
@@ -19,7 +23,7 @@ const NotFound = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                 />
                 <motion.h1
-                    className="text-3xl font-bold mt-20 text-center"
+                    className="text-3xl font-bold mt-20 text-center dark:text-[#F9FAFB]"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
@@ -27,7 +31,7 @@ const NotFound = () => {
                     404 - Page Not Found
                 </motion.h1>
                 <motion.p
-                    className="text-xl leading-[2.2rem] text-center mt-8"
+                    className="text-xl leading-[2.2rem] text-center mt-8 dark:text-[#F9FAFB]"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 }}
