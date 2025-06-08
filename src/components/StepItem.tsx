@@ -20,7 +20,7 @@ const StepItem = ({ icon, text, completed, selected }: StepItemProps) => {
         <div
             className={clsx(
                 "text-[#9CA3AF] w-24 h-14",
-                selected && "text-button-selected"
+                selected && "text-button-selected dark:text-[#ECEDEF]"
             )}
         >
             <div className="flex justify-center">{getIcon()}</div>

@@ -1,5 +1,6 @@
 import { Calendar, CreditCard, Shield, Truck } from "lucide-react";
 import StepItem from "./StepItem";
+import ThemeToggle from "./ThemeToggle";
 
 const ProgressStepper = () => {
     return (
@@ -19,6 +20,8 @@ const ProgressStepper = () => {
             <StepItem icon={<Calendar size={30} />} text="Choose Date" />
             <hr className="border-button-selected border-2 w-28" />
             <StepItem icon={<CreditCard size={30} />} text="Payment" />
+            <span className="ml-20"></span>
+            <ThemeToggle />
         </div>
     );
 };

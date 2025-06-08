@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const menuVariants = {
     hidden: {
@@ -36,7 +37,7 @@ const MobileNav = () => {
                 <p></p>
                 <button
                     onClick={() => setIsNavOpen((isOpen) => !isOpen)}
-                    className="flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 cursor-pointer"
+                    className="flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-[#4B5563] focus:outline-none focus:ring-2 focus:ring-gray-200 cursor-pointer"
                     aria-label={isNavOpen ? "Close menu" : "Open menu"}
                 >
                     {isNavOpen ? (
@@ -70,7 +71,7 @@ const MobileNav = () => {
                         exit="exit"
                         variants={menuVariants}
                         className={
-                            "absolute right-0 text-[#6B7280] bg-white max-w-[20rem] w-full rounded-2xl z-10 shadow-lg mt-2 md:hidden"
+                            "absolute right-0 text-[#6B7280] dark:text-[#9A9EA8] bg-white dark:bg-[#1F2937] max-w-[20rem] w-full rounded-2xl z-10 shadow-lg mt-2 md:hidden transition-all duration-300 ease-in-out"
                         }
                     >
                         <ul className="flex flex-col gap-4 p-4 font-medium">
@@ -113,6 +114,7 @@ const MobileNav = () => {
                                     Payment
                                 </a>
                             </li>
+                            <ThemeToggle />
                         </ul>
                     </motion.div>
                 )}

@@ -41,7 +41,7 @@ const ActionBar = () => {
                     animate="visible"
                     exit="exit"
                     className={
-                        "min-h-24 fixed bottom-0 bg-white p-4 w-full shadow-2xl"
+                        "min-h-24 fixed bottom-0 bg-white dark:bg-[#1F2937] p-4 w-full shadow-2xl"
                     }
                 >
                     <p className="text-sm text-[#9A9EA8] text-center">
@@ -52,14 +52,14 @@ const ActionBar = () => {
                     </p>
                     <div className="flex flex-col gap-5 lg:flex-row lg:items-end">
                         <div className="flex justify-between lg:justify-start items-center lg:gap-6 mt-5 max-w-6xl w-full mx-auto">
-                            <p className="text-[#626979] font-semibold lg:font-normal">
+                            <p className="text-[#626979] dark:text-[#9A9EA8] font-semibold lg:font-normal">
                                 {selectedSkip?.size} Yard Skip
                             </p>
                             <p>
                                 <span className="text-3xl font-bold mt-4 mr-1.5 text-button-selected">
                                     £{selectedSkip?.price_before_vat}
                                 </span>{" "}
-                                <span className="text-[#626979]">
+                                <span className="text-[#626979] dark:text-[#9A9EA8]">
                                     {selectedSkip?.hire_period_days}{" "}
                                     {dayHireText}
                                 </span>

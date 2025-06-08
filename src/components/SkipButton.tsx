@@ -10,7 +10,7 @@ const SkipButton = ({ isSelected }: SkipButtonProps) => {
         "p-3 mt-8 w-full h-12 flex justify-center items-center rounded-lg cursor-pointer transition-colors",
         isSelected
             ? "bg-button-selected text-white"
-            : "bg-button-un-selected text-[#626979]"
+            : "bg-button-un-selected dark:bg-[#4B5563] text-[#626979] dark:text-[#DCDEE2]"
     );
 
     return (

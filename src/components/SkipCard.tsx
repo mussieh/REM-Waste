@@ -30,7 +30,7 @@ const SkipCard = ({ skip }: SkipCardProps) => {
         <div
             onClick={handleSelect}
             className={clsx(
-                "bg-white rounded-2xl p-4 md:p-8 shadow-lg cursor-pointer border-2 transition-all duration-300 ease-in-out",
+                "bg-white dark:bg-[#1F2937] rounded-2xl p-4 md:p-8 shadow-lg cursor-pointer border-2 transition-all duration-300 ease-in-out",
                 isSelected
                     ? "border-button-selected"
                     : "border-transparent hover:border-button-selected/50"
@@ -48,24 +48,27 @@ const SkipCard = ({ skip }: SkipCardProps) => {
                     onLoad={() => setLoaded(true)}
                 />
                 {!loaded && (
-                    <div className="w-full h-[12.5rem] bg-gray-200 rounded-2xl animate-pulse" />
+                    <div className="w-full h-[12.5rem] bg-gray-200 dark:bg-[#364152] rounded-2xl animate-pulse" />
                 )}
             </div>
-            <p className="text-xl text-[#353B45] mt-4 font-bold">
+            <p className="text-xl text-[#353B45] dark:text-[#F9FAFB] mt-4 font-bold">
                 {skip.size} Yard Skip
             </p>
             <p className="text-sm text-[#9A9EA8]">
                 {skip.hire_period_days} day hire period
             </p>
             {!skip.allowed_on_road && (
-                <div className="bg-warning-background md:max-w-60 w-full h-10 mt-8 rounded-md flex items-center gap-3">
-                    <TriangleAlert className="ml-4" color="#F49D00" size={20} />
-                    <p className="text-xs text-[#820000]">
+                <div className="bg-warning-background dark:bg-[#A16207] md:max-w-60 w-full h-10 mt-8 rounded-md flex items-center gap-3">
+                    <TriangleAlert
+                        className="ml-4 text-[#F49D00] dark:text-[#FDF7BF]"
+                        size={20}
+                    />
+                    <p className="text-xs text-[#820000] dark:text-[#FDF7BF]">
                         Not Allowed On The Road
                     </p>
                 </div>
             )}
-            <p className="text-3xl font-bold mt-4 text-button-selected">
+            <p className="text-3xl font-bold mt-4 text-button-selected dark:text-[#4BDE80]">
                 £{skip.price_before_vat}
             </p>
             <SkipButton isSelected={isSelected} />

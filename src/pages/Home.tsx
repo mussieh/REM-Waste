@@ -65,7 +65,7 @@ const Home = () => {
     }, []);
 
     return (
-        <main className="min-h-screen bg-background">
+        <main className="min-h-screen bg-background dark:bg-[#101827] transition-all duration-300 ease-in-out">
             <section>
                 <div className="px-8 xl:px-24">
                     <motion.div
@@ -86,13 +86,13 @@ const Home = () => {
                         </motion.div>
                         <motion.h1
                             variants={itemVariants}
-                            className="text-3xl text-center font-bold"
+                            className="text-3xl text-center font-bold dark:text-[#F9FAFB]"
                         >
                             Choose Your Skip Size
                         </motion.h1>
                         <motion.p
                             variants={itemVariants}
-                            className="text-center"
+                            className="text-center dark:text-[#9CA3AF]"
                         >
                             Find the perfect skip for your project. We offer a
                             range of sizes to suit all needs.
