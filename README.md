@@ -7,9 +7,13 @@ A responsive React application built as part of a front-end coding challenge. Th
 
 ---
 
-## 📸 Preview
+## 📸 Light Mode Preview
 
-![screenshot](https://github.com/mussieh/REM-Waste/blob/main/src/assets/images/skip-page.png) <!-- Replace with your actual screenshot URL or delete this section -->
+![screenshot](https://github.com/mussieh/REM-Waste/blob/main/src/assets/images/rem-desktop-light.png)
+
+## 📸 Dark Mode Preview
+
+![screenshot](https://github.com/mussieh/REM-Waste/blob/main/src/assets/images/rem-desktop-dark.png)
 
 ---
 
@@ -23,6 +27,7 @@ A responsive React application built as part of a front-end coding challenge. Th
 - 🧪 Error handling with retry button
 - 🧾 Action bar with summary of selected skip
 - 📦 Modular and reusable component structure
+- 🌞 / 🌙 Light / Dark Mode
 
 ---
 
@@ -56,6 +61,7 @@ A responsive React application built as part of a front-end coding challenge. Th
 
 - **Framework:** React (with Vite)
 - **Language:** TypeScript
+- **Routing:** React Router
 - **Styling:** Tailwind CSS
 - **Animations:** Framer Motion (React 18-compatible)
 - **Icons:** Lucide React
