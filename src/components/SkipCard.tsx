@@ -1,22 +1,24 @@
-import { useContext } from "react";
+import { useState } from "react";
 import type { Skip } from "../shared/types/Skip";
 import SkipButton from "./SkipButton";
-import { SelectedSkipContext } from "../contexts/SelectedSkipContext";
 import clsx from "clsx";
 import { TriangleAlert } from "lucide-react";
 import Badge from "./Badge";
+import { useSelectedSkipContext } from "../hooks/useSelectedSkipContext";
 
 type SkipCardProps = {
     skip: Skip;
 };
 
 const SkipCard = ({ skip }: SkipCardProps) => {
+    const [loaded, setLoaded] = useState(false);
+
     const image = new URL(
         `../assets/images/${skip.size}-skip.webp`,
         import.meta.url
     ).href;
 
-    const { selectedSkip, setSelectedSkip } = useContext(SelectedSkipContext);
+    const { selectedSkip, setSelectedSkip } = useSelectedSkipContext();
 
     const isSelected = skip.id === selectedSkip?.id;
 
@@ -35,12 +37,19 @@ const SkipCard = ({ skip }: SkipCardProps) => {
             )}
         >
             <div className="relative">
-                <Badge size={skip.size} />
+                {loaded && <Badge size={skip.size} />}
                 <img
-                    className="w-full h-auto rounded-2xl object-cover"
+                    className={clsx(
+                        "w-full h-auto rounded-2xl object-cover",
+                        loaded ? "block" : "hidden"
+                    )}
                     src={image}
                     alt={`${skip.size} Yard Skip`}
+                    onLoad={() => setLoaded(true)}
                 />
+                {!loaded && (
+                    <div className="w-full h-[12.5rem] bg-gray-200 rounded-2xl animate-pulse" />
+                )}
             </div>
             <p className="text-xl text-[#353B45] mt-4 font-bold">
                 {skip.size} Yard Skip
