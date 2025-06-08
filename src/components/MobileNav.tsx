@@ -71,7 +71,7 @@ const MobileNav = () => {
                         exit="exit"
                         variants={menuVariants}
                         className={
-                            "absolute right-0 text-[#6B7280] dark:text-[#9A9EA8] bg-white dark:bg-[#1F2937] max-w-[20rem] w-full rounded-2xl z-10 shadow-lg mt-2 md:hidden transition-all duration-300 ease-in-out"
+                            "absolute right-0 text-[#6B7280] dark:text-[#9A9EA8] bg-white dark:bg-[#1F2937] max-w-[20rem] w-full rounded-2xl z-10 shadow-lg mt-2 md:hidden"
                         }
                     >
                         <ul className="flex flex-col gap-4 p-4 font-medium">
